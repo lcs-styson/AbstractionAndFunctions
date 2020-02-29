@@ -27,7 +27,36 @@ import Foundation
  */
 // Begin your work here...
 
-func perimeterOfTrapezoid(
+/// Will find the perimeter of a trapezoid
+///
+/// - Parameters:
+///   - sideLengthA: Length of first side of the trapezoid
+///   - sideLengthB: Length of second side of the trapezoid
+///   - sideLengthC: Length of third side of the trapezoid
+///   - sideLengthD: Length of fourth side of the trapezoid
+/// - Returns: Perimeter of trapezoid
+func perimeterOfTrapezoid(sideLengthA: Double, sideLengthB: Double, sideLengthC: Double, sideLengthD: Double) -> Double {
+    return sideLengthB + sideLengthA + sideLengthC + sideLengthD
+}
+
+let trapezoidPerimeter = perimeterOfTrapezoid(sideLengthA: 27, sideLengthB: 8, sideLengthC: 90, sideLengthD: 23)
+
+/// Can find the area of a trapezoid
+///
+/// - Parameters:
+///   - sideLengthA: Length of first side of the trapezoid
+///   - sideLengthB: Length of second side of the trapezoid
+///   - height: Length of the height of the trapezoid
+/// - Returns: Area of trapezoid
+func areaOfTrapezoid(sideLengthA: Double, sideLengthB: Double, height: Double) -> Double {
+    return (1.0/2.0) * (sideLengthA + sideLengthB) * height
+}
+
+let trapezoidArea = areaOfTrapezoid(sideLengthA: 3, sideLengthB: 7, height: 9)
+
+var theTakeaway: String {
+    return "This trapezoids area is " + String(format: "%.1f", trapezoidArea) + " cubic units and its perimeter is " + String(format: "%.1f", trapezoidPerimeter) + " cubic units."
+}
 
 /// Will find the perimeter of a triangle
 ///
@@ -40,6 +69,7 @@ func perimeterOfTriangle( sideLengthA: Double, sideLenghtB: Double, sideLengthC:
         return sideLenghtB + sideLengthA + sideLengthC
         
     }
+
     let trianglePerimeter = perimeterOfTriangle(sideLengthA: 15, sideLenghtB: 23, sideLengthC: 3)
 
 /// Finds the area of a triangle
@@ -56,7 +86,7 @@ func areaOfTriangle(base: Double, height: Double) -> Double {
     let triangleArea = areaOfTriangle(base: 12, height: 9)
 
 var theMessege: String {
-        return "This triangles area is " + String(format: "%.1f", triangleArea) + " kilometers and its perimeter is " + String(format: "%.1f", trianglePerimeter) + " kilometers."
+        return "This triangles area is " + String(format: "%.1f", triangleArea) + " cubic units and its perimeter is " + String(format: "%.1f", trianglePerimeter) + " cubic units."
     }
     
 
