@@ -27,6 +27,39 @@ import Foundation
  */
 // Begin your work here...
 
+func perimeterOfTrapezoid(
+
+/// Will find the perimeter of a triangle
+///
+/// - Parameters:
+///   - sideLengthA: length of first side
+///   - sideLenghtB: length of second side
+///   - sideLengthC: length of third side
+/// - Returns: Perimeter of triangle
+func perimeterOfTriangle( sideLengthA: Double, sideLenghtB: Double, sideLengthC: Double) -> Double {
+        return sideLenghtB + sideLengthA + sideLengthC
+        
+    }
+    let trianglePerimeter = perimeterOfTriangle(sideLengthA: 15, sideLenghtB: 23, sideLengthC: 3)
+
+/// Finds the area of a triangle
+///
+/// - Parameters:
+///   - base: Length of the base of a triangle
+///   - height: lenght of the height of the triangle
+/// - Returns: Area of triangle
+func areaOfTriangle(base: Double, height: Double) -> Double {
+    return (1.0/2.0) * base * height
+    
+    }
+
+    let triangleArea = areaOfTriangle(base: 12, height: 9)
+
+var theMessege: String {
+        return "This triangles area is " + String(format: "%.1f", triangleArea) + " kilometers and its perimeter is " + String(format: "%.1f", trianglePerimeter) + " kilometers."
+    }
+    
+
 
 
 /*:
