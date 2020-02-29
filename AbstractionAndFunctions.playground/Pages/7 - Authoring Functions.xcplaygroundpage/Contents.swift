@@ -89,9 +89,50 @@ var theMessege: String {
         return "This triangles area is " + String(format: "%.1f", triangleArea) + " cubic units and its perimeter is " + String(format: "%.1f", trianglePerimeter) + " cubic units."
     }
     
+/// Determines the surface area of a cylinder
+///
+/// - Parameters:
+///   - radius: Radius of cylinder
+///   - height: Height of cylinder
+/// - Returns: Surface area of cylinder
+func surfaceAreaOfCylinder(radius: Double, height: Double) -> Double {
+    return 2 * Double.pi * pow(radius, 2) + 2 * Double.pi * radius * height
+}
 
+let cylinderSurfaceArea = surfaceAreaOfCylinder(radius: 23, height: 21)
 
+/// Determines volume of Cylinder
+///
+/// - Parameters:
+///   - radius: Radius of cylinder
+///   - height: Height of Ccylinder
+/// - Returns: Volume of cylinder
+func volumeOfCylinder(radius: Double, height: Double) -> Double {
+    return Double.pi * pow(radius, 2) * height
+}
 
+let cylinderVolume = volumeOfCylinder(radius: 23, height: 22)
+
+//var theImportantStuff: String {
+//    return "This cylinders volume is " + String(format: "%.1f", volumeOfCylinder) + " cubic units and its surface area is " + String(format: "%.1f", surfaceAreaOfCylinder) + " cubic units."
+
+/// Surface area of a square based pyramid
+///
+/// - Parameters:
+///   - base: Length of the base of the pyramid
+///   - slant: Length of the slant height of the pyramid
+/// - Returns: Surface area of square based pyramid
+func surfaceAreaOfPyramid(base: Double, slant: Double) -> Double {
+    return pow(base, 2) + 4 * ((base * slant) / 2)
+}
+
+let pyramidSurfaceArea = surfaceAreaOfPyramid(base: 22, slant: 33)
+
+func volumeOfCone(radius: Double, height: Double, slant: Double) -> Double {
+    return (Double.pi * pow(radius, 2) * height)/3
+}
+
+let coneVolume = volumeOfCone(radius: 2, height: 3, slant: 4)
 /*:
  [Previous: Writing Documentation](@previous) | Page 7
  */
